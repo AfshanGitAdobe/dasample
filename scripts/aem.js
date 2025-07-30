@@ -305,7 +305,7 @@ function decorateTemplateAndTheme() {
       try{
       element.classList.add(toClassName(c.trim()));
       }catch(e){
-        console.error(e);
+        console.log(e);
       }
     });
   };
