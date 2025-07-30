@@ -302,7 +302,11 @@ function createOptimizedPicture(
 function decorateTemplateAndTheme() {
   const addClasses = (element, classes) => {
     classes.split(',').forEach((c) => {
+      try{
       element.classList.add(toClassName(c.trim()));
+      }catch(e){
+        console.error(e);
+      }
     });
   };
   const template = getMetadata('template');
